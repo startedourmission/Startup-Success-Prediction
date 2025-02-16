@@ -1,2 +1,42 @@
-# Startup-Success-Prediction
-Kaggle Competition : Startup Success Prediction Model: Analyzing survival factors using funding, milestone, and business relationship data.
+# 스타트업 생존 예측 모델
+
+## 프로젝트 개요
+스타트업의 펀딩 이력, 마일스톤, 비즈니스 관계 등 다양한 특성을 기반으로 기업의 생존을 예측하는 머신러닝 모델을 개발했습니다.
+
+## 데이터
+- 총 923개 스타트업 데이터
+- 주요 특성:
+  - 펀딩 관련: 총 투자금액, 투자 라운드, 투자자 수
+  - 마일스톤: 첫 마일스톤 시점, 마지막 마일스톤 시점
+  - 비즈니스 관계: 파트너십, 투자 관계 등
+  - 위치 정보: 주, 도시, 좌표
+  - 산업 분류: 소프트웨어, 웹, 모바일 등
+
+## 주요 결과
+- 최종 모델 성능:
+  - F1 점수: 0.886
+  - ROC AUC: 0.880
+  - 정밀도: 0.826
+  - 재현율: 0.955
+
+## 주요 발견
+1. 데이터 정제가 모델 성능 향상에 가장 큰 영향
+2. 시계열 특성을 고려한 평가가 현실적인 성능 측정에 중요
+3. 핵심 특성만으로도 높은 예측 성능 달성 가능
+
+## 폴더 구조
+```
+├── data/               # 데이터 파일
+├── notebooks/          # 분석 노트북
+├── src/               # 소스 코드
+│   ├── utils.py       # 유틸리티 함수
+│   └── models.py      # 모델 관련 코드
+└── reports/           # 분석 보고서
+```
+
+## 기술 스택
+- Python 3.8+
+- pandas, numpy
+- scikit-learn
+- XGBoost
+- matplotlib, seaborn
